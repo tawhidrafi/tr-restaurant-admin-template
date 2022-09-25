@@ -1,0 +1,75 @@
+/*===============
+    CSS CODES FOR THE BOOKING LIST PAGE
+===============*/
+/*=============== MAIN TITLE ===============*/
+main .main__title {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+/*=============== BOOKING CONTAINER ===============*/
+.booking {
+    display: grid;
+    place-items: center;
+    gap: 4rem;
+}
+/*=============== SINGLE BOOKING ITEM ===============*/
+.booking .b__item {
+    width: 325px;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    line-height: 1;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1.5rem;
+}
+/*=============== BOOKING ITEM TITLE ===============*/
+.booking .b__item .b__div .b__title {
+    display: block;
+    font-size: 0.938rem;
+    color: #1b8084;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+/*=============== BOOKING ITEM DETAIL ===============*/
+.booking .b__item .b__div .b__detail {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+/* For medium devices */
+@media screen and (min-width: 768px) {
+    main .main__title {
+        font-size: 2.25rem;
+    }
+    .booking .b__item {
+        width: 70%;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        gap: 2rem 4rem;
+    }
+    .booking .b__item .b__div .b__title,
+    .booking .b__item .b__div .b__detail {
+        text-align: right;
+    }
+}
+/* For large devices */
+@media screen and (min-width: 968px) {
+    main .main__title {
+        font-size: 2.5rem;
+    }
+    .booking .b__item {
+        width: 85%;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-around;
+        gap: 0;
+    }
+}
+/*=============== 
+    THE END
+===============*/
