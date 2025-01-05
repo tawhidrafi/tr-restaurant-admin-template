@@ -1,0 +1,168 @@
+/*===============
+    CSS CODES FOR TRHE DASHBOARD PAGE
+===============*/
+/*=============== MAIN TITLE ===============*/
+.main-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0 0 0;
+    text-transform: uppercase;
+}
+/*=============== SUMMERY SECTION ===============*/
+.summery {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 2rem;
+}
+/*=============== SUMMERY ITEM ===============*/
+.summery .s__item {
+    width: 280px;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    grid-template-columns: auto 25%;
+    gap: 2rem 0;
+    font-size: 1.5rem;
+    font-weight: var(--font-medium);
+    line-height: 1;
+}
+.summery .s__item .summery__icon,
+.summery .s__item .summery__action {
+    text-align: right;
+}
+.summery .s__item .summery__icon,
+.summery .s__item .summery__num {
+    color: #1B8084;
+}
+.summery .s__item .summery__action a {
+    font-size: 1.1rem;
+    transition: color 0.5s linear,
+                border 1s ease-in-out;
+}
+.summery .s__item .summery__action a:hover {
+    color: #1B8084;
+    border-bottom: 1px solid #1B8084;
+}
+/*=============== NOTICE SECTION ===============*/
+/*=============== TITLE ===============*/
+.notice .section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 2rem 0;
+    text-transform: uppercase;
+}
+/*=============== NOTICE FORM ===============*/
+.n__form {
+    padding: 1.5rem;
+    align-items: center;
+    gap: 1rem;
+}
+/*=============== TEXTAREA WITH GOOGLE STYLE INPUT ===============*/
+.form__div {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    margin-bottom: 1.25rem;
+}
+/*=============== TEXTAREA ===============*/
+.form__textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    border: 1px solid  #DADCE0;
+    border-radius: 0.5rem;
+    outline: 0;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+}
+/*=============== LEBEL FOR TEXTAREA ===============*/
+.form__label {
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    padding: 0 0.25rem;
+    background-color: #FFF;
+    color: #80868B;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+/*=============== INPUT FOCUS LABEL MOVE UP ===============*/
+.form__textarea:focus + .form__label {
+    top: -0.6rem;
+    left: 0.8rem;
+    color: #1B8084;
+    font-size: 0.875rem;
+    font-weight: 500;
+    z-index: 10;
+}
+/*=============== INPUT FOCUS LABEL STICK TO TOP ===============*/
+.form__textarea:not(:placeholder-shown).form__textarea:not(:focus) + .form__label {
+    top: -0.6rem;
+    left: 0.8rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    z-index: 10;
+}
+/*=============== INPUT FOCUS BORDER ===============*/
+.form__textarea:focus {
+    border: 1.5px solid #1B8084;
+}
+/*=============== FORM BUTTON ===============*/
+.n__form .form__item .form__submit {
+    outline: none;
+    border: none;
+    background: #1B8084;
+    color: #FFF;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+/* For medium devices */
+@media screen and (min-width: 768px) {
+    .main-title {
+        font-size: 2.25rem;
+    }
+    .notice .section-title {
+        font-size: 2.25rem;
+    }
+    /*=============== SUMMERY SECTION ===============*/
+    .summery {
+        grid-template-columns: auto auto;
+        gap: 2rem 4rem;
+    }
+    .summery .s__item {
+        padding: 2rem;
+        gap: 2rem 0;
+    }
+    /*=============== POPUP NOTICE SECTION ===============*/
+    .form__div {
+        width: 75%;
+    }
+}
+/* For large devices */
+@media screen and (min-width: 968px) {
+    .notice .section-title {
+        font-size: 2.5rem;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+    /*=============== SUMMERY SECTION ===============*/
+    .summery {
+        grid-template-columns: auto auto auto;
+        gap: 1rem 3rem;
+    }
+}
+/*=============== 
+    THE END
+===============*/

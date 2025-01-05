@@ -1,0 +1,276 @@
+/*===============
+    CSS CODES FOR THE MENU PAGE
+===============*/
+/*=============== MAIN TITLE ===============*/
+section .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+/*=============== FORM LAYOUT ===============*/
+.new__menu .nm__form {
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+}
+/*=============== TEXTAREA WITH GOOGLE STYLE INPUT ===============*/
+.form__div {
+    position: relative;
+    width: 300px;
+    height: 55px;
+    margin-bottom: 1.5rem;
+}
+/*=============== TEXTAREA ===============*/
+.form__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    border: 1px solid  #DADCE0;
+    border-radius: 0.5rem;
+    outline: 0;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+}
+/*=============== LEBEL FOR TEXTAREA ===============*/
+.form__label {
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    padding: 0 0.25rem;
+    background-color: #FFF;
+    color: #80868B;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+/*=============== INPUT FOCUS LABEL MOVE UP ===============*/
+.form__input:focus + .form__label {
+    top: -0.6rem;
+    left: 0.8rem;
+    color: #1B8084;
+    font-size: 0.875rem;
+    font-weight: 500;
+    z-index: 10;
+}
+/*=============== INPUT FOCUS LABEL STICK TO TOP ===============*/
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+    top: -0.6rem;
+    left: 0.8rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    z-index: 10;
+}
+/*=============== INPUT FOCUS BORDER ===============*/
+.form__input:focus {
+    border: 1.5px solid #1B8084;
+}
+/*=============== DYNAMIC FILE INPUT ===============*/
+.file__container {
+    text-align: center;
+    width: 300px;
+    margin-bottom: 1.5rem;
+}
+/*=============== FILE WRAPPER ===============*/
+.file__wrapper {
+    height: 200px;
+    margin-bottom: 10px;
+    border: 2px dashed #1B8084;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+}
+/*=============== IMAGE ===============*/
+.file__wrapper .nm__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.file__wrapper .nm__img img {
+    width: 100%;
+    object-fit: cover;
+}
+/*=============== STATIC CONTENT ===============*/
+.file__wrapper .static__content i {
+    display: block;
+    font-size: 3.5rem;
+    color: #1B8084;
+    line-height: 1;
+}
+.file__wrapper .static__content .static__p {
+    display: block;
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+    color: #1B8084;
+    line-height: 1.3;
+}
+/*=============== CANCEL BUTTON ===============*/
+.file__wrapper #cancel-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 3px 6px;
+    background: #1B8084;
+    color: #FFF;
+    border-radius: 4px;
+    display: none;
+}
+/*=============== FILE NAME ===============*/
+.file__wrapper #file-name {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 8px 0;
+    background: #1B8084;
+    color: #FFF;
+    display: none;
+}
+/*=============== TO SHOW THE CANCEL BUTTON & FILE NAME ===============*/
+.file__item-show {
+    display: block !important;
+}
+/*=============== CUSTOM BUTTON ===============*/
+.file__container #custom-btn {
+    margin-top: 15px;
+    border-radius: 5px;
+    background: #1B8084;
+    color: #FFF;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0.4rem 1rem;
+    transition: color 0.15s ease-in-out,
+              background-color 0.15s ease-in-out,
+              border-color 0.15s ease-in-out,
+              box-shadow 0.15s ease-in-out;
+}
+/*=============== FORM SUBMIT BUTTON ===============*/
+.nm__form .form__item:last-child {
+    width: 100%;
+    grid-column: 1 / -1;
+    text-align: right;
+    padding-right: 2rem;
+}
+.nm__form .form__item .form__sumbit {
+    border-radius: 5px;
+    background: #1B8084;
+    color: #FFF;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+}
+/*=============== CURRENT MENU ===============*/
+.cm__content {
+    justify-content: center;
+    gap: 4rem;
+}
+.cm__item {
+    grid-template-columns: 70% 30%;
+    width: 315px;
+    padding: 1.25rem;
+    gap: 0.5rem 0;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%),
+                0 8px 16px rgb(0 0 0 / 10%);
+    background: #FFF;
+}
+.cm__img {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+.cm__img img {
+	height: 260px;
+	object-fit: cover;
+    border-radius: 0.75rem;
+}
+.cm__name {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    font-size: 20px;
+    font-weight: 500;
+	text-transform: uppercase;
+}
+.cm__detail {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    padding-right: 0.5rem;
+	font-size: 15px;
+	text-transform: capitalize;
+}
+.cm__price {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    font-size: 20px;
+    font-weight: 500;
+    justify-self: end;
+}
+.cm__tag {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    justify-self: end;
+    align-self: center;
+    color: #FFF;
+    background: #1B8084;
+    padding: 0.20rem 0.5rem;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+/* For medium devices */
+@media screen and (min-width: 768px) {
+    section .section-title {
+        font-size: 2.25rem;
+    }
+    .new__menu .nm__form {
+        grid-template-columns: auto auto;
+        column-gap: 2rem;
+        justify-content: center;
+        place-items: unset;
+    }
+    .nm__form .form__item:last-child {
+        padding-right: 0;
+    }
+    /*=============== CURRENT ===============*/
+    .cm__content {
+        grid-template-columns: auto auto;
+        gap: 4rem;
+        justify-content: center;
+    }
+}
+/* For large devices */
+@media screen and (min-width: 968px) {
+    section .section-title {
+        font-size: 2.5rem;
+    }
+    .new__menu .nm__form {
+        column-gap: 4rem;
+    }
+    /*=============== CURRENT ===============*/
+    .cm__content {
+        grid-template-columns: auto auto auto;
+    }
+}
+/*=============== 
+    THE END
+===============*/
